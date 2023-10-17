@@ -4,6 +4,8 @@
  * Custom translucent site header
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 .site-header {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -99,6 +101,13 @@
 .bi {
   vertical-align: -.125em;
   /* fill: currentColor; */
+}
+
+.nvabar {
+  font-size: 17px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
 }
 
 .nav-scroller {
@@ -205,6 +214,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
+  font-family: 'Montserrat', sans-serif;
   padding-top: 1rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
@@ -293,3 +303,67 @@ body {
     margin-top: 7rem;
   }
 }
+
+
+#video{
+  display:block;
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  margin:130px auto 0;
+  height:700px;
+  }
+
+.video-background {
+        background: #000;
+        
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -99;
+      }
+      .video-foreground,
+      .video-background iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      #vidtop-content {
+          top: 0;
+          color: #fff;
+      }
+      
+      @media (min-aspect-ratio: 16/9) {
+        .video-foreground { height: 300%; top: -100%;     }
+      }
+      @media (max-aspect-ratio: 16/9) {
+        .video-foreground { width: 300%; left: -100%; height: 131%;}
+      }
+      @media all and (max-width: 600px) {
+      .vid-info { width: 50%; padding: .5rem; }
+      .vid-info h1 { margin-bottom: .2rem; }
+      }
+      @media all and (max-width: 500px) {
+      .vid-info .acronym { display: none; }
+      }
+   
+
+
+
+
+
+.navbar {
+  color: #777777;
+  font-weight: 600;
+  margin-bottom: 0;
+  background-color: var(--bs-gray-100);
+  z-index: 9999;
+  border: 0;
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: "Nanum Gothic"
+}
+
