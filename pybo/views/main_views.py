@@ -1,4 +1,4 @@
-from flask import Blueprint, url_for, render_template
+from flask import Blueprint, url_for, render_template, current_app
 from werkzeug.utils import redirect
 
 bp = Blueprint('main', __name__, url_prefix='/')
@@ -15,6 +15,7 @@ def hello_pybo():
 
 @bp.route('/')
 def index():
+    current_app.logger.info("INFO 레벨로 출력")
     return render_template('index.html')
 
 @bp.route('/enoughus')
