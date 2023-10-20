@@ -6,19 +6,6 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-.site-header {
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
-.site-header a {
-  color: #8e8e8e;
-  transition: color .15s ease-in-out;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
 
 /*
  * Dummy devices (replace them with your own or something else entirely!)
@@ -103,11 +90,17 @@
   /* fill: currentColor; */
 }
 
-.nvabar {
-  font-size: 17px !important;
+.navbar {
+  font-size: 22px !important;
   line-height: 1.4 !important;
+  font-weight: 600;
+  margin-bottom: 0;
   letter-spacing: 4px;
   border-radius: 0;
+  z-index: 9999;
+  border: 0;
+  border-radius: 0;
+  font-family: "Montserrat";
 }
 
 .nav-scroller {
@@ -117,7 +110,23 @@
   overflow-y: hidden;
 }
 
-.nav-scroller .nav {
+.h1 {
+  font-size: 60px;
+  font-family: "SebangGothic" !important;
+}
+
+.h3 {
+  font-size: 40px;
+  font-family: "SebangGothic" !important;
+  color: var(--bs-yellow);
+}
+
+.display3 {
+  font-family: "SebangGothic";
+}
+
+
+/* .nav-scroller .nav {
   display: flex;
   flex-wrap: nowrap;
   padding-bottom: 1rem;
@@ -126,28 +135,7 @@
   text-align: center;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-}
-
-.btn-bd-primary {
-  --bd-violet-bg: #712cf9;
-  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet-bg);
-  --bs-btn-border-color: var(--bd-violet-bg);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #6528e0;
-  --bs-btn-hover-border-color: #6528e0;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #5a23c8;
-  --bs-btn-active-border-color: #5a23c8;
-}
-.bd-mode-toggle {
-  z-index: 1500;
-}
-
+} */
 
 
 @keyframes slide {
@@ -205,7 +193,32 @@
   }
 }
 
+body {
+  overflow-y: overlay; /* 반드시 overlay 처리 */
+  scrollbar-face-color: #fcb245;
+}
+/* 
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+} */
 
+::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 10px;
+  border: 4px solid transparent;
+  box-shadow: inset 6px 6px 0 rgba(34, 34, 34, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 4px solid transparent;
+  box-shadow: inset 6px 6px 0 rgba(34, 34, 34, 0.3);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: transparent;
+}
 
 
 
@@ -214,11 +227,12 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gmarketsans', sans-serif;
   padding-top: 1rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
+
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -347,23 +361,4 @@ body {
       @media all and (max-width: 500px) {
       .vid-info .acronym { display: none; }
       }
-   
-
-
-
-
-
-.navbar {
-  color: #777777;
-  font-weight: 600;
-  margin-bottom: 0;
-  background-color: var(--bs-gray-100);
-  z-index: 9999;
-  border: 0;
-  font-size: 20px !important;
-  line-height: 1.4 !important;
-  letter-spacing: 4px;
-  border-radius: 0;
-  font-family: "Nanum Gothic"
-}
 

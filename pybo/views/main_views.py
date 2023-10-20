@@ -16,3 +16,19 @@ def hello_pybo():
 @bp.route('/')
 def index():
     return render_template('index.html')
+
+@bp.route('/enoughus')
+def enoughus():
+    return render_template('enoughus.html')
+
+@bp.route('/sub01')
+def sub01():
+    return render_template('sub01.html')
+
+@bp.route('/portfolio')
+def portfolio():
+    return render_template('portfolio.html')
+
+@bp.route('/contact')
+def contact():
+    return render_template('contact.html')
